@@ -47,7 +47,7 @@
             if (isNaN(currentUsage) || isNaN(totalRequests) || totalRequests === 0) return;
 
             // Calculate usage percentage
-            const usagePercent = ((currentUsage / totalRequests) * 100).toFixed(1);
+            const usagePercent = ((currentUsage / totalRequests) * 100).toFixed(0);
 
             // Update usage display - add percentage next to numbers
             const numbersContainer = usageNumberEl.parentElement;
@@ -100,7 +100,7 @@
                         timePercent = Math.min(100, Math.max(0, (elapsedMs / totalPeriodMs) * 100));
                     }
 
-                    const timePercentFormatted = timePercent.toFixed(1);
+                    const timePercentFormatted = timePercent.toFixed(0);
 
                     // Create new reset text with percentage
                     const newResetText = resetText.replace(
